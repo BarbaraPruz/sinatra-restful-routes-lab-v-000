@@ -32,8 +32,6 @@ class ApplicationController < Sinatra::Base
     erb :recipe_show
   end
 
-
-
   # update
   get '/recipes/:id/edit' do
     @recipe = Recipe.find_by_id(params[:id])
@@ -50,7 +48,7 @@ class ApplicationController < Sinatra::Base
    end
 
    # delete
-   # Delete (from Show id page)
+   # Delete (from Show page)
   delete '/recipes/:id/delete' do
     Recipe.delete(params[:id])
     redirect '/index'
