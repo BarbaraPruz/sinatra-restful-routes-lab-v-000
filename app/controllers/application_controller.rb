@@ -19,10 +19,6 @@ class ApplicationController < Sinatra::Base
     @all = Recipe.all
     erb :index
   end
-  get '/index' do
-    @all = Recipe.all
-    erb :index
-  end
   get '/recipes' do     # more restful
     @all = Recipe.all
     erb :index
